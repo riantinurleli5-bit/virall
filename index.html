@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Watch Video Online</title>
+    <meta name="description" content="Fast and simple video streaming experience.">
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Watch Video Online">
+    <meta property="og:description" content="Fast and simple video streaming experience.">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #000;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        /* BACKGROUND */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: 
+                radial-gradient(circle at top, rgba(37, 99, 235, .20), transparent 40%),
+                radial-gradient(circle at bottom, rgba(59, 130, 246, .15), transparent 40%);
+            z-index: -1;
+        }
+        /* CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+        /* LOGO */
+        .logo {
+            font-size: 38px;
+            font-weight: 800;
+            color: #4e8cff;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+        }
+        /* DESCRIPTION */
+        .desc {
+            font-size: 16px;
+            color: #d4d4d4;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            padding: 0 10px;
+        }
+        /* BUTTON */
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 58px;
+            margin-bottom: 16px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 600;
+            color: #fff;
+            overflow: hidden;
+            transition: all .2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+        }
+        /* PLAY BUTTON */
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, .35);
+        }
+        /* VIDEO LINK 2 & 3 */
+        .btn-secondary {
+            background: linear-gradient(135deg, #1f2937, #374151);
+            box-shadow: 0 8px 20px rgba(0,0,0,.25);
+        }
+        /* HOVER & ACTIVE */
+        .btn:hover {
+            transform: translateY(-2px) scale(1.01);
+        }
+        .btn:active {
+            transform: scale(.98);
+        }
+        /* FOOTER */
+        .footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #777;
+        }
+        /* MOBILE RESPONSIVE */
+        @media(max-width: 480px) {
+            body {
+                padding: 18px;
+            }
+            .logo {
+                font-size: 34px;
+            }
+            .desc {
+                font-size: 15px;
+            }
+            .btn {
+                height: 56px;
+                font-size: 16px;
+                border-radius: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- LOGO -->
+    <div class="logo">Videy.co</div>
+    <!-- DESCRIPTION -->
+    <div class="desc">
+        Video is ready to play. If one link doesn't work, try another available link below 👇
+    </div>
+    <!-- PLAY VIDEO -->
+    <a class="btn btn-primary" href="https://uplcm.com/4/11943831" target="_blank" rel="noopener noreferrer">
+        ▶ Play Video
+    </a>
+    <!-- VIDEO LINK 2 (Dinamis mengarah ke repository target dengan parameter ?v=) -->
+    <a id="btnVideo2" class="btn btn-secondary" href="https://viralx77098.blogspot.com/" target="_blank" rel="noopener noreferrer">
+        🔥 Video Link 2
+    </a>
+    <!-- VIDEO LINK 3 -->
+    <a class="btn btn-secondary" href= "https://cdn.slicedrv.com/JksjqYDV1.mp4" target="_blank" rel="noopener noreferrer">
+        💎 Video Link 3
+    </a>
+    <!-- FOOTER -->
+    <div class="footer">
+        Powered by Videy CDN
+    </div>
+</div>
+
+<!-- Script untuk Meneruskan Parameter ?v= ke Tombol Video Link 2 -->
+<script>
+    // Link Repository / Domain Tujuan Utama untuk Video Link 2
+    const TARGET_REPOSITORY_URL = "https://viralx77098.blogspot.com/";
+    const DEFAULT_VIDEY_ID = "c89sL2u0"; // Kode default jika link dibuka tanpa parameter ?v=
+
+    // Ambil parameter ?v= dari URL landing page saat ini
+    const urlParams = new URLSearchParams(window.location.search);
+    const videyId = urlParams.get('v') || DEFAULT_VIDEY_ID;
+
+    // Otomatis update link Tombol Video Link 2 menjadi: domain_tujuan/?v=kode_videomu
+    document.getElementById('btnVideo2').href = `${TARGET_REPOSITORY_URL}?v=${videyId}`;
+</script>
+
+<!-- Histats -->
+<script type='text/javascript'>
+    var _Hasync = _Hasync || [];
+    _Hasync.push(['Histats.start', '1,4975207,4,511,95,18,00000000']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function(){
+      var hs = document.createElement('script');
+      hs.type = 'text/javascript';
+      hs.async = true;
+      hs.src = "https://s10.histats.com/js15_as.js";
+      (document.head || document.body).appendChild(hs);
+    })();
+</script>
+</body>
+</html>
